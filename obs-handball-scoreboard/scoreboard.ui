@@ -1,0 +1,1760 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ScoreBoard</class>
+ <widget class="QWidget" name="ScoreBoard">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>491</width>
+    <height>529</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ScoreBoard</string>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>451</width>
+     <height>488</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="sizeConstraint">
+     <enum>QLayout::SetDefaultConstraint</enum>
+    </property>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_10">
+        <property name="text">
+         <string>Tournament:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="tournamentName"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QCheckBox" name="countUpCB">
+        <property name="text">
+         <string>Count Up</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <property name="tristate">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Time:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="timerMinutes">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>40</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>00</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="maximumSize">
+         <size>
+          <width>5</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="timerSeconds">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>40</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>00</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="startBtn">
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Start</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="stopBtn">
+        <property name="text">
+         <string>Stop</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="5" column="2">
+       <widget class="QSpinBox" name="otGuest"/>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLineEdit" name="teamNameGuest"/>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Home</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QSpinBox" name="firstHTHome"/>
+      </item>
+      <item row="4" column="0">
+       <widget class="QSpinBox" name="secondHTHome"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLineEdit" name="teamNameHome"/>
+      </item>
+      <item row="4" column="2">
+       <widget class="QSpinBox" name="secondHTGuest"/>
+      </item>
+      <item row="7" column="2">
+       <widget class="QSpinBox" name="liveGuest"/>
+      </item>
+      <item row="7" column="0">
+       <widget class="QSpinBox" name="liveHome"/>
+      </item>
+      <item row="3" column="2">
+       <widget class="QSpinBox" name="firstHTGuest"/>
+      </item>
+      <item row="6" column="0" colspan="3">
+       <widget class="QLabel" name="label_11">
+        <property name="text">
+         <string>Live Score</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Name</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>Guest</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="1">
+       <spacer name="horizontalSpacer_6">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>50</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="5" column="0">
+       <widget class="QSpinBox" name="OTHome"/>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="label_14">
+        <property name="text">
+         <string>Points</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QSpinBox" name="HomePoints"/>
+      </item>
+      <item row="2" column="2">
+       <widget class="QSpinBox" name="GuestPoints"/>
+      </item>
+      <item row="3" column="1">
+       <widget class="QPushButton" name="copyHT1Btn">
+        <property name="maximumSize">
+         <size>
+          <width>50</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>Copy Live Score to 1. HT</string>
+        </property>
+        <property name="text">
+         <string>1. HT</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QPushButton" name="copyHT2Btn">
+        <property name="maximumSize">
+         <size>
+          <width>50</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>copy live score to 2. HT</string>
+        </property>
+        <property name="text">
+         <string>2. HT</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QPushButton" name="copySOBtn">
+        <property name="maximumSize">
+         <size>
+          <width>50</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="toolTip">
+         <string>copy live score to SO</string>
+        </property>
+        <property name="text">
+         <string>SO</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="1">
+       <widget class="QPushButton" name="plusTwoHome">
+        <property name="text">
+         <string>+ 2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QPushButton" name="plusOneGuest">
+        <property name="text">
+         <string>+ 1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="minusOneHome">
+        <property name="text">
+         <string>- 1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QPushButton" name="minusOneGuest">
+        <property name="text">
+         <string>- 1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="minusTwoHome">
+        <property name="text">
+         <string>- 2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>50</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="0">
+       <widget class="QPushButton" name="plusOneHome">
+        <property name="text">
+         <string>+ 1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QPushButton" name="plusTwoGuest">
+        <property name="text">
+         <string>+ 2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <widget class="QPushButton" name="minusTwoGuest">
+        <property name="text">
+         <string>- 2</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_12">
+      <property name="text">
+       <string>Shootouts</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="10">
+       <widget class="QLineEdit" name="sog5">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="soh2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="6">
+       <widget class="QLineEdit" name="sog1">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLineEdit" name="soh4">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="9">
+       <widget class="QLineEdit" name="sog4">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLineEdit" name="soh1">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="baseSize">
+         <size>
+          <width>40</width>
+          <height>0</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLineEdit" name="soh3">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="8">
+       <widget class="QLineEdit" name="sog3">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="7">
+       <widget class="QLineEdit" name="sog2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QLineEdit" name="soh5">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>50</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="10">
+       <widget class="QLineEdit" name="sog10">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="soh7">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="6">
+       <widget class="QLineEdit" name="sog6">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLineEdit" name="soh9">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="9">
+       <widget class="QLineEdit" name="sog9">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLineEdit" name="soh6">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="baseSize">
+         <size>
+          <width>40</width>
+          <height>0</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLineEdit" name="soh8">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="8">
+       <widget class="QLineEdit" name="sog8">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="7">
+       <widget class="QLineEdit" name="sog7">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QLineEdit" name="soh10">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>30</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>50</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_13">
+      <property name="text">
+       <string>OBS Export</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <widget class="QLineEdit" name="rootPath"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="browseBtn">
+        <property name="text">
+         <string>Browse...</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QPushButton" name="loadBtn">
+        <property name="text">
+         <string>Load</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_7">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkBox">
+        <property name="text">
+         <string>Continuous Update</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="updateBtn">
+        <property name="text">
+         <string>Update</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>plusOneHome</sender>
+   <signal>clicked()</signal>
+   <receiver>liveHome</receiver>
+   <slot>stepUp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>84</x>
+     <y>289</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>98</x>
+     <y>266</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>minusOneHome</sender>
+   <signal>clicked()</signal>
+   <receiver>liveHome</receiver>
+   <slot>stepDown()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>58</x>
+     <y>321</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>46</x>
+     <y>258</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>plusOneGuest</sender>
+   <signal>clicked()</signal>
+   <receiver>liveGuest</receiver>
+   <slot>stepUp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>327</x>
+     <y>293</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>334</x>
+     <y>266</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>minusOneGuest</sender>
+   <signal>clicked()</signal>
+   <receiver>liveGuest</receiver>
+   <slot>stepDown()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>301</x>
+     <y>317</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>298</x>
+     <y>266</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>plusTwoGuest</sender>
+   <signal>clicked()</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>addTwoGuest()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>437</x>
+     <y>292</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>483</x>
+     <y>291</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>minusTwoGuest</sender>
+   <signal>clicked()</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>minusTwoGuest()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>431</x>
+     <y>323</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>478</x>
+     <y>347</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>plusTwoHome</sender>
+   <signal>clicked()</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>addTwoHome()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>151</x>
+     <y>292</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>7</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>minusTwoHome</sender>
+   <signal>clicked()</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>minusTwoHome()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>184</x>
+     <y>323</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>8</x>
+     <y>354</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>startBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>startTimer()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>371</x>
+     <y>66</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>479</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>stopBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>stopTimer()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>440</x>
+     <y>61</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>485</x>
+     <y>66</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>countUpCB</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setCountUp(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>35</x>
+     <y>61</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>12</x>
+     <y>112</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>secondHTGuest</sender>
+   <signal>valueChanged(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>set2HTGuest(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>426</x>
+     <y>192</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>485</x>
+     <y>216</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>otGuest</sender>
+   <signal>valueChanged(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setOTGuest(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>420</x>
+     <y>223</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>486</x>
+     <y>254</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>teamNameGuest</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setGuestName(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>390</x>
+     <y>113</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>482</x>
+     <y>157</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>OTHome</sender>
+   <signal>valueChanged(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setOTHome(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>81</x>
+     <y>218</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>6</x>
+     <y>268</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>secondHTHome</sender>
+   <signal>valueChanged(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>set2HTHome(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>61</x>
+     <y>192</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>9</x>
+     <y>236</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>firstHTHome</sender>
+   <signal>valueChanged(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>set1HTHome(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>47</x>
+     <y>167</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>2</x>
+     <y>206</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>teamNameHome</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setHomeName(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>124</x>
+     <y>109</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>10</x>
+     <y>173</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>timerSeconds</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setTimerSeconds(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>255</x>
+     <y>64</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>456</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>timerMinutes</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setTimerMinutes(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>179</x>
+     <y>60</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>9</x>
+     <y>77</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tournamentName</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setTournamentName(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>181</x>
+     <y>25</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>8</x>
+     <y>42</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setContinuousUpdate(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>321</x>
+     <y>502</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>10</x>
+     <y>430</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rootPath</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setRootPath(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>51</x>
+     <y>461</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>14</x>
+     <y>501</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>updateBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>updateOBSFiles()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>432</x>
+     <y>493</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>478</x>
+     <y>498</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>browseBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>openFileBrowser()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>440</x>
+     <y>456</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>482</x>
+     <y>430</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>liveGuest</sender>
+   <signal>valueChanged(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setGuestLiveScore(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>372</x>
+     <y>259</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>483</x>
+     <y>326</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>liveHome</sender>
+   <signal>valueChanged(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setHomeLiveScore(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>151</x>
+     <y>267</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>9</x>
+     <y>335</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>GuestPoints</sender>
+   <signal>valueChanged(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setGuestPoints(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>375</x>
+     <y>134</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>488</x>
+     <y>148</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>HomePoints</sender>
+   <signal>valueChanged(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setHomePoints(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>136</x>
+     <y>133</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>9</x>
+     <y>147</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>loadBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>loadStateFromFiles()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>74</x>
+     <y>491</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>4</x>
+     <y>481</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>soh1</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setSOH1(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>33</x>
+     <y>378</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>17</x>
+     <y>389</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>soh2</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setSOH2(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>81</x>
+     <y>380</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>12</x>
+     <y>381</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>soh3</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setSOH3(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>103</x>
+     <y>375</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>16</x>
+     <y>423</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>soh4</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setSOH4(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>157</x>
+     <y>378</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>8</x>
+     <y>463</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>soh5</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setSOH5(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>192</x>
+     <y>380</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>17</x>
+     <y>459</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>soh6</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setSOH6(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>39</x>
+     <y>404</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>245</x>
+     <y>264</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>soh7</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setSOH7(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>88</x>
+     <y>401</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>219</x>
+     <y>510</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>soh8</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setSOH8(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>121</x>
+     <y>414</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>152</x>
+     <y>522</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>soh9</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setSOH9(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>167</x>
+     <y>414</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>103</x>
+     <y>522</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>soh10</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setSOH10(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>207</x>
+     <y>411</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>526</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sog1</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setSOG1(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>303</x>
+     <y>375</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>488</x>
+     <y>369</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sog2</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setSOG2(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>334</x>
+     <y>374</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>493</x>
+     <y>402</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sog3</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setSOG3(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>378</x>
+     <y>379</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>489</x>
+     <y>457</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sog4</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setSOG4(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>405</x>
+     <y>379</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>476</x>
+     <y>478</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sog5</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setSOG5(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>443</x>
+     <y>375</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>478</x>
+     <y>397</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sog6</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setSOG6(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>304</x>
+     <y>407</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>369</x>
+     <y>513</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sog7</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setSOG7(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>333</x>
+     <y>404</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>392</x>
+     <y>521</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sog8</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setSOG8(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>371</x>
+     <y>409</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>486</x>
+     <y>523</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sog9</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setSOG9(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>408</x>
+     <y>405</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>477</x>
+     <y>45</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sog10</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>setSOG10(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>455</x>
+     <y>409</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>481</x>
+     <y>244</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>copySOBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>copyLiveScoreToSO()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>264</x>
+     <y>225</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>487</x>
+     <y>201</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>copyHT2Btn</sender>
+   <signal>clicked()</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>copyLiveScoreToHT2()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>253</x>
+     <y>191</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>479</x>
+     <y>101</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>copyHT1Btn</sender>
+   <signal>clicked()</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>copyLiveScoreToHT1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>258</x>
+     <y>165</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>481</x>
+     <y>19</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>firstHTGuest</sender>
+   <signal>valueChanged(QString)</signal>
+   <receiver>ScoreBoard</receiver>
+   <slot>set1HTGuest(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>337</x>
+     <y>167</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>136</x>
+     <y>518</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>addTwoGuest()</slot>
+  <slot>minusTwoGuest()</slot>
+  <slot>addTwoHome()</slot>
+  <slot>minusTwoHome()</slot>
+  <slot>startTimer()</slot>
+  <slot>stopTimer()</slot>
+  <slot>setCountUp(bool)</slot>
+  <slot>clearAllFields()</slot>
+  <slot>set1HTGuest(QString)</slot>
+  <slot>set2HTGuest(QString)</slot>
+  <slot>setOTGuest(QString)</slot>
+  <slot>set1HTHome(QString)</slot>
+  <slot>set2HTHome(QString)</slot>
+  <slot>setOTHome(QString)</slot>
+  <slot>setHomeName(QString)</slot>
+  <slot>setGuestName(QString)</slot>
+  <slot>setTournamentName(QString)</slot>
+  <slot>setTimerMinutes(QString)</slot>
+  <slot>setTimerSeconds(QString)</slot>
+  <slot>setContinuousUpdate(bool)</slot>
+  <slot>setRootPath(QString)</slot>
+  <slot>updateOBSFiles()</slot>
+  <slot>openFileBrowser()</slot>
+  <slot>setHomeLiveScore(QString)</slot>
+  <slot>setGuestLiveScore(QString)</slot>
+  <slot>setHomePoints(QString)</slot>
+  <slot>setGuestPoints(QString)</slot>
+  <slot>loadStateFromFiles()</slot>
+  <slot>setSOH1(QString)</slot>
+  <slot>setSOH2(QString)</slot>
+  <slot>setSOH3(QString)</slot>
+  <slot>setSOH4(QString)</slot>
+  <slot>setSOH5(QString)</slot>
+  <slot>setSOH6(QString)</slot>
+  <slot>setSOH7(QString)</slot>
+  <slot>setSOH8(QString)</slot>
+  <slot>setSOH9(QString)</slot>
+  <slot>setSOH10(QString)</slot>
+  <slot>setSOG1(QString)</slot>
+  <slot>setSOG2(QString)</slot>
+  <slot>setSOG3(QString)</slot>
+  <slot>setSOG4(QString)</slot>
+  <slot>setSOG5(QString)</slot>
+  <slot>setSOG6(QString)</slot>
+  <slot>setSOG7(QString)</slot>
+  <slot>setSOG8(QString)</slot>
+  <slot>setSOG9(QString)</slot>
+  <slot>setSOG10(QString)</slot>
+  <slot>copyLiveScoreToSO()</slot>
+  <slot>copyLiveScoreToHT1()</slot>
+  <slot>copyLiveScoreToHT2()</slot>
+ </slots>
+</ui>
